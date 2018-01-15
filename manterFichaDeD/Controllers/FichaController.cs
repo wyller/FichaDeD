@@ -12,9 +12,22 @@ namespace manterFichaDeD.Controllers
 
         IFichaBLL fichaBLL = new FichaBLL();
 
+        public class Skills
+        {
+            public Skills(string tipo, string nome)
+            {
+                this.tipo = tipo;
+                this.nome = nome;
+            }
+
+            public string tipo {get; set;}
+            public string nome {get; set;}
+        }
+
         public class Player
         {
-            public Player(int Id, int For, int Int, int Des, int Cons, int Sab, int Car, string Classe, int Xp)
+            public Player(int Id, int For, int Int, int Des, int Cons, int Sab, int Car, 
+            string Classe, int Xp, List<Skills> Skills)
             {
                 this.Id = Id;
                 this.For = For;
@@ -25,6 +38,7 @@ namespace manterFichaDeD.Controllers
                 this.Sab = Sab;
                 this.Classe = Classe;
                 this.Xp = Xp;
+                this.Skills = Skills;
 
             }
 
@@ -37,14 +51,25 @@ namespace manterFichaDeD.Controllers
             public int Car  {get; set;}
             public string Classe {get; set;}
             public int Xp {get; set;}
-            public List<object> Skills {get; set;}
+            public List<Skills> Skills {get; set;}
         }
+
+        public List<Skills> magoInicial = new List<Skills>()
+        {
+            new Skills("Magico", "FireBall"),
+            new Skills("Magico", "Blink")
+        };
+        public List<Skills> guerreiroInicial = new List<Skills>()
+        {
+            new Skills("Fisico", "Investida"),
+            new Skills("Fisico", "Call")
+        };
 
         public List<Player> players = new List<Player>()
         {
-            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150),
-            new Player (2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120),            
-            new Player (3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70)
+            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150, mag),
+            new Player (2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120, @"{""tipo"" : ""fisico"", ""nome"" : ""investida""}"),            
+            new Player (3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70, @"{""tipo"" : ""fisico"", ""nome"" : ""investida""}")
         };
 
         // GET api/ficha
