@@ -1,0 +1,8 @@
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\obj\Debug\netstandard2.0\Camada.BLL.csproj.CoreCompileInputs.cache
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\obj\Debug\netstandard2.0\Camada.BLL.AssemblyInfoInputs.cache
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\obj\Debug\netstandard2.0\Camada.BLL.AssemblyInfo.cs
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\bin\Debug\netstandard2.0\Camada.BLL.deps.json
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\bin\Debug\netstandard2.0\Camada.BLL.dll
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\bin\Debug\netstandard2.0\Camada.BLL.pdb
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\obj\Debug\netstandard2.0\Camada.BLL.dll
+c:\Users\Fepam\Desktop\Treinamento\3º dia\ApiD&D\Camada.BLL\obj\Debug\netstandard2.0\Camada.BLL.pdb
