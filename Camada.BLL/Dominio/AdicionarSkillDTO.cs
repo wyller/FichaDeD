@@ -1,5 +1,9 @@
-public class AdicionarSkillDTO
+namespace Camada.BLL.Dominio
 {
-    public string tipo{get;set;}
-    public string nome{get;set;}
+    public class AdicionarSkillDTO
+    {
+        public string tipo{get;set;}
+        public string nome{get;set;}
+    }
 }
+

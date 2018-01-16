@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Camada.BLL.Dominio;
+using Camada.BLL.Implementation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace manterFichaDeD.Controllers
@@ -55,18 +57,21 @@ namespace manterFichaDeD.Controllers
         }
         public List<Player> players = new List<Player>()
         {
-            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150, new List<Skill>{
-            new Skill("Magico", "FireBall"),
-            new Skill("Magico", "Blink")
-        }),
-            new Player(2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120, new List<Skill>{
-            new Skill("Magico", "FireBall"),
-            new Skill("Magico", "Blink")
-        }),            
-            new Player(3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70, new List<Skill>{
-            new Skill("Magico", "FireBall"),
-            new Skill("Magico", "Blink")
-        })
+            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150, new List<Skill>
+            {
+                new Skill("Magico", "FireBall"),
+                new Skill("Magico", "Blink")
+            }),
+            new Player(2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120, new List<Skill>
+            {
+                new Skill("Magico", "FireBall"),
+                new Skill("Magico", "Blink")
+            }),            
+            new Player(3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70, new List<Skill>
+            {
+                new Skill("Magico", "FireBall"),
+                new Skill("Magico", "Blink")
+            })
         };
 
         // GET api/ficha
@@ -204,7 +209,7 @@ namespace manterFichaDeD.Controllers
             Skill newSkill = new Skill(novaSkill.tipo, novaSkill.nome);
 
             var pl = players.Where(jogador => jogador.Id == id).FirstOrDefault();
-            foreach (var Skill in pl.Skills)
+            foreach (Skill Skill in pl.Skills)
             {
                 if (Skill.tipo == "Magico")
                 {
@@ -220,7 +225,7 @@ namespace manterFichaDeD.Controllers
                 pl.Skills.Add(newSkill);
                 return Json(pl);
             }
-                return null;           
+                return Json(pl);           
         }
 
         // POST api/ficha/5

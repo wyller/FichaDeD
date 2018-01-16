@@ -1,4 +1,6 @@
 
+using Camada.BLL.Dominio;
+
 public interface IFichaBLL
 {
     int AtualizaXp(int XpAtual, XpDTO XpAdiquirido);

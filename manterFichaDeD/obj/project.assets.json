@@ -12556,11 +12556,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\manterFichaDeD\\manterFichaDeD.csproj",
+      "projectUniqueName": "C:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\manterFichaDeD\\manterFichaDeD.csproj",
       "projectName": "manterFichaDeD",
-      "projectPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\manterFichaDeD\\manterFichaDeD.csproj",
+      "projectPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\manterFichaDeD\\manterFichaDeD.csproj",
       "packagesPath": "C:\\Users\\Fepam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\manterFichaDeD\\obj\\",
+      "outputPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\manterFichaDeD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12579,8 +12579,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "c:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\Camada.BLL\\Camada.BLL.csproj": {
-              "projectPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\Camada.BLL\\Camada.BLL.csproj"
+            "C:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\Camada.BLL\\Camada.BLL.csproj": {
+              "projectPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\3º dia\\ApiD&D\\Camada.BLL\\Camada.BLL.csproj"
             }
           }
         }

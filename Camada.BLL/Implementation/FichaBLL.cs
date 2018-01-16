@@ -1,49 +1,55 @@
-public class FichaBLL : IFichaBLL
+using Camada.BLL.Dominio;
+
+namespace Camada.BLL.Implementation
 {
-    public int AtualizaXp(int XpAtual, XpDTO XpAdiquirido)
-    {
-        return XpAtual + XpAdiquirido.xp;
-    }
 
-    public string AtualizarClasse(string ClasseAtual, EvoluirPersonagemDTO NovaClasse)
+    public class FichaBLL : IFichaBLL
     {
-        if(ClasseAtual == "Mago")
+        public int AtualizaXp(int XpAtual, XpDTO XpAdiquirido)
         {
-            if(NovaClasse.Classe == "ArkMago")
-            {
-                return "ArkMago";
-            }else if(NovaClasse.Classe == "Invocador")
-            {
-                return "Invocador";
-            }
-        }else if (ClasseAtual == "Guerreiro")
-        {
-            if(NovaClasse.Classe == "Gladiador")
-            {
-                return "Gladiador";
-            }else if(NovaClasse.Classe == "Escudeiro")
-            {
-                return "Escudeiro";
-            }            
+            return XpAtual + XpAdiquirido.xp;
         }
-        return null;
-    }
 
-    public bool AdicionarSkill(AdicionarSkillDTO SkillNova, int QtdSkillFisica, int QtdSkillMagica)
-    {
-        if (SkillNova.tipo == "Magico")
+        public string AtualizarClasse(string ClasseAtual, EvoluirPersonagemDTO NovaClasse)
         {
-            if (QtdSkillMagica <= 3)
+            if(ClasseAtual == "Mago")
             {
-                return true;
-            }
-        }else if (SkillNova.tipo == "Fisico")
-        {
-            if (QtdSkillFisica <= 4)
+                if(NovaClasse.Classe == "ArkMago")
+                {
+                    return "ArkMago";
+                }else if(NovaClasse.Classe == "Invocador")
+                {
+                    return "Invocador";
+                }
+            }else if (ClasseAtual == "Guerreiro")
             {
-                return true;
+                if(NovaClasse.Classe == "Gladiador")
+                {
+                    return "Gladiador";
+                }else if(NovaClasse.Classe == "Escudeiro")
+                {
+                    return "Escudeiro";
+                }            
             }
+            return null;
         }
-        return false;
+
+        public bool AdicionarSkill(AdicionarSkillDTO SkillNova, int QtdSkillFisica, int QtdSkillMagica)
+        {
+            if (SkillNova.tipo == "Magico")
+            {
+                if (QtdSkillMagica < 3)
+                {
+                    return true;
+                }
+            }else if (SkillNova.tipo == "Fisico")
+            {
+                if (QtdSkillFisica < 4)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
