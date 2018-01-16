@@ -1,0 +1,10 @@
+dotnet new sln fichaDeD = criar projeto
+mkdir dotnet new = criar repositorio
+dotnet add sln -n camadas=
+dotnet new sln -n camadas= os dois criam e adicionam a camada sln
+dotnet new webapi -n Camada.Api = criar API
+dotnet sln add .\Camada.Api\Camada.Api.csproj = ligar projeto com a API
+dotnet new classlib -n Camada.BLL = criar BLL(regra de negocio)
+dotnet sln add .\Camada.BLL\Camada.BLL.csproj = ligar projeto com a BLL
+dotnet add reference ..\Camada.BLL\Camada.BLL.csproj = ligar API em BLL
+
