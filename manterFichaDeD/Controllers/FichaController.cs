@@ -12,9 +12,9 @@ namespace manterFichaDeD.Controllers
 
         IFichaBLL fichaBLL = new FichaBLL();
 
-        public class Skills
+        public class Skill
         {
-            public Skills(string tipo, string nome)
+            public Skill(string tipo, string nome)
             {
                 this.tipo = tipo;
                 this.nome = nome;
@@ -27,7 +27,7 @@ namespace manterFichaDeD.Controllers
         public class Player
         {
             public Player(int Id, int For, int Int, int Des, int Cons, int Sab, int Car, 
-            string Classe, int Xp, List<Skills> Skills)
+            string Classe, int Xp, List<Skill> Skills)
             {
                 this.Id = Id;
                 this.For = For;
@@ -51,34 +51,33 @@ namespace manterFichaDeD.Controllers
             public int Car  {get; set;}
             public string Classe {get; set;}
             public int Xp {get; set;}
-            public List<Skills> Skills {get; set;}
+            public List<Skill> Skills {get; set;}
         }
-
-        public List<Skills> magoInicial = new List<Skills>()
-        {
-            new Skills("Magico", "FireBall"),
-            new Skills("Magico", "Blink")
-        };
-        public List<Skills> guerreiroInicial = new List<Skills>()
-        {
-            new Skills("Fisico", "Investida"),
-            new Skills("Fisico", "Call")
-        };
-
         public List<Player> players = new List<Player>()
         {
-            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150, mag),
-            new Player (2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120, @"{""tipo"" : ""fisico"", ""nome"" : ""investida""}"),            
-            new Player (3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70, @"{""tipo"" : ""fisico"", ""nome"" : ""investida""}")
+            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150, new List<Skill>{
+            new Skill("Magico", "FireBall"),
+            new Skill("Magico", "Blink")
+        }),
+            new Player(2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120, new List<Skill>{
+            new Skill("Magico", "FireBall"),
+            new Skill("Magico", "Blink")
+        }),            
+            new Player(3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70, new List<Skill>{
+            new Skill("Magico", "FireBall"),
+            new Skill("Magico", "Blink")
+        })
         };
 
         // GET api/ficha
         [HttpGet]
         public IActionResult getAll()
         {
-            try{
+            try
+            {
                 return Json(players);
-            }catch(Exception e){
+            }catch(Exception e)
+            {
                 StatusCode(500, "deu ruim get comum" + e);
                 return null;
             }
@@ -88,14 +87,16 @@ namespace manterFichaDeD.Controllers
         [HttpGet("{id}")]
         public Player GetPlayer(int id)
         {
-            try{
+            try
+            {
                 foreach(Player pl in players){
                     if(pl.Id == id)
                         return pl;  
                 }
                 return null;
             }
-            catch(Exception e){
+            catch(Exception e)
+            {
                 StatusCode(500, "deu ruim get id" + e
             );
                 return null;
@@ -154,7 +155,8 @@ namespace manterFichaDeD.Controllers
             }
         }
 
-        [HttpPut("Evoluir/{id}")]
+        //PUT api/ficha/5
+        [HttpPut("evoluir/{id}")]
         public IActionResult EvoluirPersonagem(int id, [FromBody] EvoluirPersonagemDTO novaClasse)
         {
             try
@@ -191,6 +193,34 @@ namespace manterFichaDeD.Controllers
                 StatusCode(500, "Atualizar XP deu ruim" + e);                
                 return null;                
             }
+        }
+
+        //PUT api/ficha/5
+        [HttpPut("addabilidade/{id}")]
+        public IActionResult AdicionarSkill(int id, [FromBody] AdicionarSkillDTO novaSkill)
+        {
+            int QtdSkillsFisicas = 0;
+            int QtdSkillsMagicas = 0;
+            Skill newSkill = new Skill(novaSkill.tipo, novaSkill.nome);
+
+            var pl = players.Where(jogador => jogador.Id == id).FirstOrDefault();
+            foreach (var Skill in pl.Skills)
+            {
+                if (Skill.tipo == "Magico")
+                {
+                    QtdSkillsMagicas++;
+                }else if (Skill.tipo == "Fisico")
+                {
+                    QtdSkillsFisicas++;
+                }
+            }
+            if((fichaBLL.AdicionarSkill(novaSkill, QtdSkillsFisicas, QtdSkillsMagicas)))
+            {
+
+                pl.Skills.Add(newSkill);
+                return Json(pl);
+            }
+                return null;           
         }
 
         // POST api/ficha/5

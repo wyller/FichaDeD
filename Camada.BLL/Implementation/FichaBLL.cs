@@ -28,4 +28,22 @@ public class FichaBLL : IFichaBLL
         }
         return null;
     }
+
+    public bool AdicionarSkill(AdicionarSkillDTO SkillNova, int QtdSkillFisica, int QtdSkillMagica)
+    {
+        if (SkillNova.tipo == "Magico")
+        {
+            if (QtdSkillMagica <= 3)
+            {
+                return true;
+            }
+        }else if (SkillNova.tipo == "Fisico")
+        {
+            if (QtdSkillFisica <= 4)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
