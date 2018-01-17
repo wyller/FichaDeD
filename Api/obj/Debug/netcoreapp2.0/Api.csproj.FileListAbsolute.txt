@@ -1,0 +1,12 @@
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\Api.deps.json
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\Api.runtimeconfig.json
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\Api.runtimeconfig.dev.json
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\Api.dll
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\Api.pdb
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\BLL.dll
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\BLL.pdb
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.csproj.CoreCompileInputs.cache
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfoInputs.cache
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfo.cs
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.dll
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.pdb
