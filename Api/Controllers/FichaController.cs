@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using BLL.Dominio;
 using BLL.Implementation;
-using Microsoft.AspNetCore.Mvc;
 using BLL.Interface;
 using Model;
 
@@ -15,8 +15,6 @@ namespace Controllers.Controllers
     {
 
         IFichaBLL fichaBLL = new FichaBLL();
-
-       
 
         public List<Player> players = new List<Player>()
         {
@@ -78,7 +76,8 @@ namespace Controllers.Controllers
         [HttpGet("int/{id}")]
         public IActionResult GetInteligencia(int id)
         {
-            try{
+            try
+            {
                 foreach(Player pl in players)
                 {
                     if(pl.Id == id)
@@ -86,7 +85,8 @@ namespace Controllers.Controllers
                 }
                 return null;
             }
-            catch(Exception e){
+            catch(Exception e)
+            {
                 StatusCode(500, "deu ruim get id" + e);
                 return null;
             }

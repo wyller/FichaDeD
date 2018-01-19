@@ -5,10 +5,8 @@ using Xunit;
 
 namespace Test
 {
-    public class FichaBLL_Test
+    public class AdicionarSkill_Test
     {
-
-
         [Fact]
         public void DeveRetornarTrueQuandoAQtdSkillFisicaEQtdSkillMagicaForemMenorQue4e3Sucessivamente()
         {
@@ -199,21 +197,5 @@ namespace Test
             Assert.Equal(result, 250);
         }
 
-        [Fact]
-        public void DeveRetornarFalseQuandoOValorXpAntipoEXpNovoForemNegativos()
-        {
-            FichaBLL fichaBLL = new FichaBLL();
-
-            XpDTO xpNovo = new XpDTO();
-            xpNovo.xp = -100;
-
-            bool result = true;
-            if (xpNovo.xp < 0)
-            {
-                result = false;
-            }
-            
-            Assert.False(result);
-        }
     }
 }
