@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using BLL.Dominio;
-using BLL.Implementation;
+using DAL.Dominio;
+using DAL.Model;
 using BLL.Interface;
-using Model;
+using BLL.Implementation;
 
 namespace Controllers.Controllers
 {
     [Route("api/[controller]")]
     public class FichaController : Controller
     {
-
         IFichaBLL fichaBLL = new FichaBLL();
 
         public List<Player> players = new List<Player>()
@@ -99,6 +98,7 @@ namespace Controllers.Controllers
             try
             {
                 players.Add(pl);
+                fichaBLL.insert(pl);
                 return Json(players);
             }
             catch(Exception e)

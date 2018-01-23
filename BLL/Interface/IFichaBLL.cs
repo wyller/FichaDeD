@@ -1,4 +1,5 @@
-using BLL.Dominio;
+using DAL.Dominio;
+using DAL.Model;
 
 namespace BLL.Interface 
 {
@@ -7,5 +8,7 @@ namespace BLL.Interface
         int AtualizaXp(int XpAtual, XpDTO XpAdiquirido);
         string AtualizarClasse(string ClasseAtual, EvoluirPersonagemDTO novaClasse);
         bool AdicionarSkill(AdicionarSkillDTO SkillNova, int QtdFisica, int QtdMagica);
+
+        void insert(Player player);
     }
 }

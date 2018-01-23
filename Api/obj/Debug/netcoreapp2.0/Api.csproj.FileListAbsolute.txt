@@ -10,3 +10,5 @@ c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\
 c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.AssemblyInfo.cs
 c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.dll
 c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\obj\Debug\netcoreapp2.0\Api.pdb
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\DAL.dll
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\Api\bin\Debug\netcoreapp2.0\DAL.pdb

@@ -1,4 +1,4 @@
-namespace BLL.Dominio
+namespace DAL.Dominio
 {
     public class XpDTO
     {

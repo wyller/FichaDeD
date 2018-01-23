@@ -1,12 +1,21 @@
 using System;
-using BLL.Dominio;
 using BLL.Interface;
+using DAL.Dominio;
+using DAL.Model;
+using DAL.DAO;
 
 namespace BLL.Implementation
 {
 
     public class FichaBLL : IFichaBLL
     {
+
+        public void insert(Player player)
+        {
+                PlayerDAO db = new PlayerDAO();
+                db.insert(player);
+        }
+
         public int AtualizaXp(int XpAtual, XpDTO XpAdiquirido)
         {
             int novoXp = System.Math.Abs(XpAdiquirido.xp);

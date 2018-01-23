@@ -6,3 +6,5 @@ c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\BLL\obj\Debug\netstandard2.0
 c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\BLL\obj\Debug\netstandard2.0\BLL.AssemblyInfo.cs
 c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\BLL\obj\Debug\netstandard2.0\BLL.dll
 c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\BLL\obj\Debug\netstandard2.0\BLL.pdb
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\BLL\bin\Debug\netstandard2.0\DAL.dll
+c:\Users\Fepam\Desktop\Treinamento\7º dia\FichaDeD\BLL\bin\Debug\netstandard2.0\DAL.pdb

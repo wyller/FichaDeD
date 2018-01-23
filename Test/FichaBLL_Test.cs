@@ -1,6 +1,6 @@
 using System;
 using BLL.Implementation;
-using BLL.Dominio;
+using DAL.Dominio;
 using Xunit;
 
 namespace Test
