@@ -11,9 +11,10 @@ using System;
 namespace DAL.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20180124113807_FirtConnection")]
+    partial class FirtConnection
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +53,7 @@ namespace DAL.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("SkillId");
+                    b.Property<int?>("PlayerId");
 
                     b.Property<string>("nome")
                         .IsRequired();
@@ -62,7 +63,7 @@ namespace DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SkillId");
+                    b.HasIndex("PlayerId");
 
                     b.ToTable("Skill");
                 });
@@ -71,7 +72,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Model.Player")
                         .WithMany("Skills")
-                        .HasForeignKey("SkillId");
+                        .HasForeignKey("PlayerId");
                 });
 #pragma warning restore 612, 618
         }

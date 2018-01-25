@@ -10,5 +10,8 @@ namespace BLL.Interface
         bool AdicionarSkill(AdicionarSkillDTO SkillNova, int QtdFisica, int QtdMagica);
 
         void insert(Player player);
+        void UpdatePlayer(Player player);
+        void DeletePlayer(Player player);
+        Player SelectPlayerFind(int id);
     }
 }

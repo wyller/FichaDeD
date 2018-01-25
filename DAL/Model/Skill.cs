@@ -4,7 +4,6 @@ using DAL.Model;
 
 namespace DAL.Model
 {
-    [Table("Skill")]
     public class Skill
     {
         public Skill(string tipo, string nome)
@@ -13,7 +12,8 @@ namespace DAL.Model
             this.nome = nome;
         }
 
-        [Key]
+        [Key]        
+        [ForeignKey("PlayerSkills")]
         public int Id   {get; set;}
 
         [Required]

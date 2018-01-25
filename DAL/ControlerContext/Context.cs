@@ -17,7 +17,7 @@ namespace DAL.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=postgres;User Id=admin;Password=123456;");
+            optionsBuilder.UseNpgsql("Server=localhost;Database=postgres;User Id=admin;Password=123456;Port=5432");
         }
     }
 }

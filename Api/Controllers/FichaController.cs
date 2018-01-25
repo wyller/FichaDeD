@@ -17,20 +17,20 @@ namespace Controllers.Controllers
 
         public List<Player> players = new List<Player>()
         {
-            new Player(1, 03, 16, 05, 07,14, 11, "Mago", 150, new List<Skill>
+            new Player(03, 16, 05, 07, 14, 11, "Mago", 150, new List<Skill>
             {
                 new Skill("Magico", "FireBall"),
                 new Skill("Magico", "Blink")
             }),
-            new Player(2, 18, 03, 11, 16, 03, 14, "Guerreiro", 120, new List<Skill>
+            new Player(18, 03, 11, 16, 03, 14, "Guerreiro", 120, new List<Skill>
             {
-                new Skill("Magico", "FireBall"),
-                new Skill("Magico", "Blink")
+                new Skill("Fisico", "Investida"),
+                new Skill("Fisico", "Rasteira")
             }),            
-            new Player(3, 11, 11, 18, 11, 06, 18, "Guerreiro", 70, new List<Skill>
+            new Player(11, 11, 18, 11, 06, 18, "Guerreiro", 70, new List<Skill>
             {
-                new Skill("Magico", "FireBall"),
-                new Skill("Magico", "Blink")
+                new Skill("Fisico", "Investida"),
+                new Skill("Fisico", "Rasteira")
             })
         };
 
@@ -57,10 +57,8 @@ namespace Controllers.Controllers
                 var pl = players.Where(jogador=>jogador.Id == id).FirstOrDefault();
                 if (pl == null)
                 {
-                return Json(pl);  
-                    
+                    return Json(pl);  
                 }
-                
                 return null;
             }
             catch(Exception e)
@@ -80,7 +78,7 @@ namespace Controllers.Controllers
                 foreach(Player pl in players)
                 {
                     if(pl.Id == id)
-                        return Json(pl.Int);  
+                        return Json(pl.Int);
                 }
                 return null;
             }
@@ -103,8 +101,8 @@ namespace Controllers.Controllers
             }
             catch(Exception e)
             {
-                StatusCode(500, "post deu ruim" + e);
-                return null;
+
+                return StatusCode(500, "post deu ruim" + e);
             }
         }
 
@@ -121,6 +119,7 @@ namespace Controllers.Controllers
                     if(result != null)
                     {
                         pl.Classe = result;
+                        fichaBLL.UpdatePlayer(pl);
                     }
                     return Json(pl);
                 }
@@ -213,19 +212,16 @@ namespace Controllers.Controllers
         {
             try
             {
-            foreach (Player pl in players)
-            {
-                if(pl.Id == id)
+                Player pl = fichaBLL.SelectPlayerFind(id);
+                if(pl != null)
                 {
-                    players.Remove(pl);
-                    return Json(players);
+                    fichaBLL.DeletePlayer(pl);
+                    return Json(pl);
                 }
-            }
-            return null;
+                return NotFound();
             }catch(Exception e)
             {
-                StatusCode(500, "deu ruim no delete" + e);
-                return null;
+                return StatusCode(500, "deu ruim no delete: " + e);
             }
         }
     }

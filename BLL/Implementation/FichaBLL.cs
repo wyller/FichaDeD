@@ -16,6 +16,29 @@ namespace BLL.Implementation
                 db.insert(player);
         }
 
+        public void UpdatePlayer(Player player)
+        {
+            PlayerDAO db = new PlayerDAO();
+            db.UpdatePlayer(player);
+        }
+
+        public void DeletePlayer(Player player)
+        {
+            PlayerDAO db = new PlayerDAO();
+            db.DeletePlayer(player);
+        }
+
+        public Player SelectPlayerFind(int id)
+        {
+            PlayerDAO db = new PlayerDAO();
+            return db.SelectPlayerFind(id);
+        }
+
+//-----------
+//-----------
+//-----------
+//-----------
+
         public int AtualizaXp(int XpAtual, XpDTO XpAdiquirido)
         {
             int novoXp = System.Math.Abs(XpAdiquirido.xp);

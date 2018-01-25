@@ -2698,11 +2698,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\BLL\\BLL.csproj",
+      "projectPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\Fepam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\BLL\\obj\\",
+      "outputPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2721,8 +2721,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj": {
-              "projectPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj"
+            "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj"
             }
           }
         }

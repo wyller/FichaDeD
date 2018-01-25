@@ -2680,11 +2680,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\Fepam\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\Fepam\\Desktop\\Treinamento\\7º dia\\FichaDeD\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
